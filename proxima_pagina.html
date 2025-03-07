@@ -39,24 +39,41 @@
             max-width: 600px;
             margin: auto;
         }
-        @media (max-width: 768px) {
-            p {
-                font-size: 24px; /* Aumento de 50% */
-                margin: 120px 10px; /* Ajuste do espaço para telas menores */
-            }
-            .image-placeholder {
-                height: 150px;
-                margin: 150px auto; /* Ajuste do espaço para telas menores */
-            }
+        .buttons {
+            margin-top: 50px;
+        }
+        .buttons button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .yes-button {
+            background-color: green;
+            color: white;
+        }
+        .no-button {
+            background-color: red;
+            color: white;
         }
     </style>
+    <script>
+        function hideNoButton() {
+            document.getElementById('no-button').style.display = 'none';
+            document.getElementById('laugh').style.display = 'block';
+        }
+        function openWhatsApp() {
+            window.location.href = "https://wa.me/5511969779796?text=Sim%2C%20quero%20conversar.";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>🎉 Bem-vindo à próxima página!</h1>
-
-        <br>
-        <br>
         <p>Você conseguiu acessar com sucesso!</p>
         <p>Mas hoje não é uma recompensa que você irá ganhar.</p>
         <p>Na real era para existir uma recompensa, mas infelizmente eu não consegui te presentear com essas rosas.</p>
@@ -67,16 +84,19 @@
         <p>Aquela vontade que sentiu de fumar, não quero que fique no esquecimento ou só na vontade.</p>
         
         <div class="image-placeholder">Imagem aqui</div>
-
-        <br>
-        <br>
-        <br>
         
         <p>Quero mostrar que sei como fazer as coisas acontecerem, e eu realmente sei como arrumar, eu sempre soube, mas nunca usei, quero ser transparente com você.</p>
         
         <div class="image-placeholder">Imagem aqui</div>
         
         <p>Eu só preciso que deixe eu mostrar, pode começar com uma conversa, a oportunidade de uma conversa que eu falei que queria ter um dia, quero mostrar como mudar, como ser transparente, e se discordar ou quiser acrescentar algo, eu vou ser totalmente flexível.</p>
+        
+        <div class="buttons">
+            <button class="yes-button" onclick="openWhatsApp()">SIM</button>
+            <button id="no-button" class="no-button" onclick="hideNoButton()">NÃO</button>
+        </div>
+        
+        <p id="laugh" style="display: none; font-size: 27px; margin-top: 20px;">kkkkkkkkk</p>
     </div>
 </body>
 </html>
