@@ -26,15 +26,23 @@
         .image-placeholder {
             width: 100%;
             max-width: 300px;
-            height: 200px;
-            background-color: #fff;
-            margin: 200px auto; /* Aumento do espaço entre imagens */
+            margin: 150px auto; /* Ajuste do espaço entre imagens */
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
         }
+
+        .image-placeholder img {
+            width: 100%;
+            height: auto;
+            max-height: 200px; /* Ajuste para manter a proporção */
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
         .container {
             max-width: 600px;
             margin: auto;
@@ -78,16 +86,25 @@
         <p>Mas hoje não é uma recompensa que você irá ganhar.</p>
         <p>Na real era para existir uma recompensa, mas infelizmente eu não consegui te presentear com essas rosas.</p>
         
-        <div class="image-placeholder">Imagem aqui</div>
+        <div class="image-placeholder">
+            <img src="images/flores.jpg" alt="Descrição da imagem">
+        </div>
+        
+
         
         <p>Hoje eu estou fazendo isso porque eu preciso fazer isso, não posso deixar isso tudo acontecer, quero mostrar algo diferente, mostrar que fiz tudo errado.</p>
         <p>Aquela vontade que sentiu de fumar, não quero que fique no esquecimento ou só na vontade.</p>
         
-        <div class="image-placeholder">Imagem aqui</div>
+        <div class="image-placeholder">
+            <img src="images/narga.jpg" alt="Descrição da imagem">
+        </div>
+        
         
         <p>Quero mostrar que sei como fazer as coisas acontecerem, e eu realmente sei como arrumar, eu sempre soube, mas nunca usei, quero ser transparente com você.</p>
         
-        <div class="image-placeholder">Imagem aqui</div>
+        <div class="image-placeholder">
+            <img src="images/coracao.jpg" alt="Descrição da imagem">
+        </div>
         
         <p>Eu só preciso que deixe eu mostrar, pode começar com uma conversa, a oportunidade de uma conversa que eu falei que queria ter um dia, quero mostrar como mudar, como ser transparente, e se discordar ou quiser acrescentar algo, eu vou ser totalmente flexível.</p>
         
